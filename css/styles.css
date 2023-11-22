@@ -1,0 +1,1508 @@
+html{
+	scroll-behavior: smooth;
+}
+
+body{
+	margin-top: 3rem;
+	text-align: left;
+	font-family: 'Poppins', serif;
+	background-color: #fff;
+	animation: fadeInAnimation ease 3s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+	
+}
+
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+     }
+}
+
+/*Fade Effect*/
+.fade {
+  opacity: 1;
+}
+
+
+/*Nav Bar*/
+.navbar{
+	background-color: #eee;
+	background-size: cover;
+	text-align: left;
+	border-bottom: 5px solid #bb8c00;
+}
+
+.navbar-logo{
+	height: 5rem;
+}
+.navbar-logo-text{
+	height: 5rem;
+	margin-right: .5rem;
+	width: 90%;
+}
+
+.navbar-brand{
+	font-family: 'Anton', sans-serif;
+	color: #0a1122;
+	font-size: 2rem;
+}
+
+.lg-device{
+	display: inline-block;
+}
+
+.sm-device{
+	display: none;
+	margin-left: 1rem;
+}
+
+.nav-item{
+	padding: 0 18px;
+}
+
+.navbar-light .navbar-nav .nav-link{
+	color: #1b2233;
+	padding: 0;
+}
+
+.navbar-light .navbar-nav .nav-link.active {
+    color: #bb8c00;
+}
+
+.navbar-light .navbar-nav .nav-link:hover{
+	color: #bb8c00;
+}
+
+.nav-link .selected{
+	background-color: #bb8c00;
+	color: #fff;
+	padding: 2.8rem;
+	padding-top: 6rem;
+	transition: 1s;
+}
+
+.navbar-toggler{
+	border-left-width: 0px;
+    	border-top-width: 0px;
+    	border-right-width: 0px;
+    	border-bottom-width: 0px;
+}
+button.navbar-toggler:focus{
+	outline: none;
+}
+
+/*To Shrink the navbar on scroll*/
+.primary-nav {
+    transition: all 0.5s ease-in-out;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+ }
+
+.shrink {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    padding-left: 2rem !important;
+    padding-right: 2rem !important;
+    min-height: 45px !important;
+}
+
+ .shrink .nav-link {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;       
+}
+
+.shrink .nav-link .selected{
+	padding-bottom: 2.3rem !important;
+	transition: 0.6s;
+}
+
+
+.gold-text{
+	color: #bb8c00;
+}
+
+
+/*To Make the CARAT Symbol INLINE with the LINK Besides it*/
+.navbar-dropdown-link{
+	display: inline;
+}
+
+.dropdown-menu{
+	background-color: rgba(240, 240, 240, 0.9);
+	transition: 2s;
+	margin-left: -4.5rem;
+	border-radius: 0;
+	padding: 0;
+}
+
+.products_dropdown{
+	margin-left: -8rem;
+}
+
+.services_dropdown{
+	margin-left: -4.5rem;
+}
+
+.dropdown-item{
+	text-align: left;
+}
+
+.dropdown-item:hover{
+	color: #fff;
+	background-color: #bb8c00;
+}
+
+.dropdown-item:active{
+	background-color: #bb8c00;	
+}
+
+#about-us-menu.dropdown-menu{
+	margin-left: -2.5rem;
+}
+
+
+#partners-menu.dropdown-menu{
+	margin-left: -1.5rem;
+}
+
+
+
+/*Cover Section*/
+
+.container-fluid{
+	padding: 0;
+}
+
+.row{
+	margin : 0;
+	height: 100%;
+}
+
+#cover-section{
+	height: 100vh;
+	padding: 0;
+	margin-top: -3rem;
+}
+
+#cover-section .blank{
+	height: 0;
+}
+
+.intro-foreground{
+	position: relative;
+	right: 2rem;
+	height: 100vh;
+}
+
+.intro-tagline{
+	position: absolute;
+	top: 53%;
+	transform: translateY(-50%);
+	font-size: 3rem;
+	padding: 3.5rem;
+	font-weight: 700;
+	background: linear-gradient(to right, rgba(190,190,190,1), rgba(190, 190, 190, 0.7));
+	color: rgba(10,33,50,1);
+}
+
+.intro-background{
+	position: absolute;
+	z-index: 0;
+	background-color: rgba(10,33,50,1);
+	height: 100vh;
+}
+
+.intro-background-heading{
+	position: relative;
+	top: 50%;
+	left: 25%;
+	font-size: 1.8rem;
+	font-family: 'Anton', serif;
+	font-weight: 300;
+	text-align: center;
+	color: #fff;
+}
+
+.intro-background .carousel-item{
+	padding: 0;
+	margin: 0;
+	height: 100vh;
+}
+
+/*To PROPERLY FADE-TRANSITION (remove ".slide" in HTML CODE first) and ADD this*/
+.intro-background .carousel.carousel-fade .carousel-item {
+    display: block;
+    opacity: 0;
+    transition: opacity ease-out 2s;
+    left: 0;
+    top: 0;
+    position: absolute;
+}
+.intro-background .carousel.carousel-fade .carousel-item.active {
+    opacity: 1 !important;
+}
+.intro-background .carousel.carousel-fade .carousel-item:first-child {
+    top: auto;
+    position: relative;
+    transition: opacity ease-out 2s;
+}
+.intro-background .carousel.carousel-fade .carousel-item:second-child {
+    top: auto;
+    position: relative;
+    transition: opacity ease-out 2s;
+}
+
+
+.intro-background .col-lg-9{
+	padding: 0;
+}
+
+.intro-carousel-item-1{ 
+	/*background: linear-gradient(to left, rgba(10,33,50,0.4), rgba(10,33,50,1)), url("../images/industrial_procurement.jpg");*/
+	background: linear-gradient(to left, rgba(187,140,0,0.4), rgba(187,140,0,0.1)), url("../images/industrial_procurement.jpg");
+	background-size: cover;
+	background-position: center;
+}
+
+
+.intro-carousel-item-2{ 
+	background: linear-gradient(to left, rgba(187,140,0,0.4), rgba(187,140,0,0.1)), url("../images/industry_automation.jpg");
+	background-size: cover;
+	background-position: center;
+}
+
+
+.intro-carousel-item-3{ 
+	background: linear-gradient(to left, rgba(187,140,0,0.4), rgba(187,140,0,0.1)), url("../images/oil_and_gas.jpg");
+	background-size: cover;
+	background-position: center;
+}
+
+
+.intro-carousel-item-4{
+	background: linear-gradient(to left, rgba(187,140,0,0.4), rgba(187,140,0,0.1)), url("../images/petrochemical.jpg");
+	background-size: cover;
+	background-position: center;
+}
+
+
+.intro-carousel-item-5{
+	background: linear-gradient(to left, rgba(187,140,0,0.4), rgba(187,140,0,0.2)), url("../images/power_sector.jpg");
+	background-size: cover;
+	background-position: center;
+}
+
+
+.intro-carousel-item-6{
+	background: linear-gradient(to left, rgba(187,140,0,0.4), rgba(187,140,0,0.1)), url("../images/communications_industry.jpg");
+	background-size: cover;
+	background-position: center;
+}
+
+
+.intro-carousel-item-7{ 
+	background: linear-gradient(to left, rgba(187,140,0,0.4), rgba(187,140,0,0.1)), url("../images/infrastructure_development.jpg");
+	background-size: cover;
+	background-position: center;
+}
+
+
+.intro-carousel-item-8{ 
+	background: linear-gradient(to left, rgba(187,140,0,0.4), rgba(187,140,0,0.1)), url("../images/fire_safety.jpg");
+	background-size: cover;
+	background-position: center;
+}
+
+
+.intro-carousel-item-9{ 
+	background: linear-gradient(to left, rgba(187,140,0,0.4), rgba(187,140,0,0.1)), url("../images/mechanical_electrical_and_civil.jpg");
+	background-size: cover;
+	background-position: center;
+}
+
+
+
+
+
+/*About Us*/
+
+#about-us{
+	background-color: #fff;
+	padding: 5rem 3rem 0;
+}
+
+.owner-image{
+	width: 100%;
+	position: relative;
+	top: 40%;
+	transform: translateY(-50%);/*
+	padding-top: 1rem;
+	padding-bottom: 5rem;*/
+	text-align: center;
+}
+
+.owner-image-style{
+	border-radius: 3%;
+	max-height: 25rem;
+}
+
+.owner-image-text{
+	line-height: 2;
+	font-weight: 700;
+	color: #444;
+	padding-top: 1rem;
+	text-align: center;
+}
+
+.about-us-text{
+	padding-right: 4rem;
+	font-size: 1.2rem;
+	padding-bottom: 5rem;
+}
+
+#about-us-button{
+	background-color: #bb8c00;
+	color: #fff;
+	transition: 0.5s;
+	border-radius: 0;
+	border-color: rgba(0, 0, 0, 0);
+	font-size: 1rem;
+}
+
+#about-us-button:hover{
+	background-color: #eba200;
+	letter-spacing: 2px;
+	transition: .5s;
+}
+
+
+
+/*Our Products*/
+#our-products{
+	background-color: #bbbbbb;
+	height: 52rem;
+}
+
+
+.carousel-item{
+	padding: 3rem 7rem;
+	height: 52rem;
+}
+
+
+.product-carousel-text{
+	font-size: 2rem;
+	text-align: left;
+	font-weight: 900;
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+h2 .product-carousel-text{
+	text-align: center;
+}
+
+.carousel .table{
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+	border-radius: 3%;
+}
+
+.carousel .table tr td{
+	padding-left: 1.5rem;
+}
+
+td{
+	font-size: 1rem;
+	text-align: left;
+}
+
+.table td.first-cell{
+	border-top: none;
+}
+
+th,td:hover{
+	cursor: default;
+}
+
+/*Electrical Products*/
+.electrical-products{
+	background: linear-gradient(to left, rgba(11,11,1,0), rgba(11,11,11,1)), url("../images/electrical_products.jpg");
+	background-size: cover;
+	color: #fff; 
+}
+
+.electrical-products-table{
+	background: rgba(11,11,11,0.8);
+}
+
+/*Industrial Automation Products*/
+.industrial-automation-products{
+	background: linear-gradient(to left, rgba(221,200,200,0), rgba(221,200,200,0.8)), url("../images/industrial_automation_product.jpg");
+	background-size: cover; 
+	color: #000;
+}
+.industrial-automation-products-table{
+	background-color: rgba(221,200,200,0.7);
+}
+
+/*Industrial Automation Solution*/
+.industrial-automation-solution{
+	background: linear-gradient(to left, rgba(0,0,0,0.0), rgba(0,0,0,1)), url("../images/industrial_automation.jpg");
+	background-size: cover;
+	color: #fff;
+}
+.industrial-automation-solution-table{
+	background: rgba(0,0,0,0.6);
+}
+
+
+/*Instrumentation Products*/
+.instrumentation-products{
+	background: linear-gradient(to left, rgba(187,187,187,0), rgba(187,187,187,0.8)), url("../images/instrumentation_products.jpg");
+	background-size: cover;
+	color: #000;
+}
+.instrumentation-products-table{
+	background: rgba(187,187,187,0.85);
+}
+
+
+/*Mechanical Products*/
+.mechanical-products{
+	/*background-color: #0b1b3f;*/
+	background: linear-gradient(to left, rgba(11,27,63,0.2), rgba(11,27,63,1)), url("../images/civil_sector.jpg");
+	background-size: cover;
+	color: #fff;
+}
+.mechanical-products-table{
+	background: rgba(11,27,63,0.7);
+}
+
+
+/*Fire and Safety*/
+.fire-and-safety-products{
+	background: linear-gradient(to left, rgba(210,210,210,0.2), rgba(210,210,210,1)), url("../images/fire_and_safety.jpg");
+	background-size: cover; 
+	color: #000;
+}
+.fire-and-safety-products-table{
+	background: rgba(210,210,210,0.8);
+}
+
+/*IT and Networking*/
+.it-and-networking-solutions{
+	background: linear-gradient(to left, rgba(11,27,23,0.2), rgba(11,27,23,1)), url("../images/it_and_networking_solution.jpg");
+	background-size: cover;
+	color: #fff;
+}
+.it-and-networking-solutions-table{
+	background: rgba(11,27,23,0.9);
+}
+
+/*Mechanical Services and Spares*/
+.mechanical-services{
+	/*background-color: #483a48;*/
+	background: linear-gradient(to left, rgba(52,38,52,0.2) 20%, rgba(52,38,52,1)), url("../images/mechanical_services.jpg");
+	background-size: cover;
+	color: #fff;
+}
+.mechanical-services-table{
+	background-color: rgba(52,38,52,0.9);
+}
+
+
+/*Electrical Services and Spares*/
+.electrical-services{
+	background: linear-gradient(to left, rgba(221,221,221,0.2), rgba(221,221,221,1)), url("../images/electrical_services.jpg");
+	background-size: cover;
+	color: #000;
+}
+.electrical-services-table{
+	background-color: rgba(221,221,221,0.7);
+}
+
+
+/*Our Products and Services COLLAPSABLE Accordion*/
+/*NOTE - ".accordion" is a CLASS NAME because it has an ACCORDION LIKE EFFECT*/
+.accordion .card-header{
+	/*background: linear-gradient(to left, rgba(10,33,50,0.8), rgba(10,33,50,1) 50%);*/
+	background: rgba(10,33,50,1);
+	padding: 0;
+}
+.accordion button{
+	text-align: left;
+	color: #fff;
+	padding: 1rem 2rem;
+}
+
+.accordion button:hover{
+	color: #fff;
+	text-decoration: none;
+	font-weight: bold;
+	/*background: #1b5b9f;*/
+	background: #dd9900;
+}
+.accordion button:focus{
+	text-decoration: none;
+}
+
+#our-products-accordion h1, #our-services-accordion h1{
+	padding-top: 2rem;
+	line-height: 2;
+}
+
+.accordion table{
+	margin: 0;
+}
+
+.accordion td{
+	padding-left: 4rem;
+	text-align: left;
+}
+
+.card-body{
+	padding: 0;
+}
+
+/*Our Products Accordion*/
+#our-products-accordion{
+	padding: 2rem 4rem 1rem;
+}
+
+/*Electrical Products*/
+.accordion .electrical-products-table{
+	background: linear-gradient(to left, rgba(11,11,1,0.5), rgba(11,11,11,1)), url("../images/electrical_products.jpg");
+	background-size: cover;
+	background-position: center;
+	color: #fff; 
+}
+
+/*Industrial Automation Products*/
+.accordion .industrial-automation-products-table{
+	background: linear-gradient(to left, rgba(221,200,200,0.5), rgba(221,200,200,1)), url("../images/industrial_automation_product.jpg");
+	background-size: cover;
+	background-position: center;
+	color: #000;
+}
+
+/*Industrial Automation Solution*/
+.accordion .industrial-automation-solution-table{
+	background: linear-gradient(to left, rgba(0,0,0,0.5), rgba(0,0,0,1)), url("../images/industrial_automation.jpg");
+	background-size: cover;
+	background-position: center;
+	color: #fff;
+}
+
+/*Instrumentation Products*/
+.accordion .instrumentation-products-table{
+	background: linear-gradient(to left, rgba(187,187,187,0.5), rgba(187,187,187,1)), url("../images/instrumentation_products.jpg");
+	background-size: cover;
+	background-position: center;
+	color: #000;
+}
+
+/*Mechanical Products*/
+.accordion .mechanical-products-table{
+	/*background-color: #0b1b3f;*/
+	background: linear-gradient(to left, rgba(11,27,63,0.5), rgba(11,27,63,1)), url("../images/civil_sector.jpg");
+	background-size: cover;
+	background-position: center;
+	color: #fff;
+}
+
+/*Fire and Safety Products*/
+.accordion .fire-and-safety-products-table{
+	background: linear-gradient(to left, rgba(210,210,210,0.5), rgba(210,210,210,1)), url("../images/fire_and_safety.jpg");
+	background-size: cover;
+	background-position: center;
+	color: #000;
+}
+
+/*IT and Networking Solutions*/
+.accordion .it-and-networking-solutions-table{
+	background: linear-gradient(to left, rgba(11,27,23,0.2), rgba(11,27,23,1)), url("../images/it_and_networking_solution.jpg");
+	background-size: cover;
+	background-position: center;
+	color: #fff;
+}
+
+
+/*Our Services Accordion*/
+#our-services-accordion{
+	padding: 1rem 4rem 5rem;
+}
+
+/*Electrical Services*/
+.accordion .mechanical-services-table{
+	/*background-color: #483a48;*/
+	background: linear-gradient(to left, rgba(52,38,52,0.5) 20%, rgba(52,38,52,1)), url("../images/mechanical_services.jpg");
+	background-size: cover;
+	background-position: center;
+	color: #fff;
+}
+
+/*Mechanical Services*/
+.accordion .electrical-services-table{
+	background: linear-gradient(to left, rgba(221,221,221,0.5), rgba(221,221,221,1)), url("../images/electrical_services.jpg");
+	background-size: cover;
+	background-position: center;
+	color: #000;
+}
+
+/*Power and Fuel Services*/
+.accordion .power-and-fuel-services-table{
+	background: linear-gradient(to left, rgba(22,42,81,0.5), rgba(22,42,81,1)), url("../images/power_and_fuel_services.jpg");
+	background-size: cover;
+	background-position: center;
+	color: #fff;
+}
+
+/*IT and Networking Services*/
+.accordion .it-and-networking-services-table{
+	background: linear-gradient(to left, rgba(181,181,211,0.8), rgba(181,181,211,1)), url("../images/it_and_networking_services.jpg");
+	background-size: cover;
+	background-position: center;
+	color: #000;
+}
+
+
+/*About Us Page*/
+hr#about-us-divider{
+	text-align: center;
+	width: 3rem;
+	border-color: #0a1155;
+	border-style: dotted;
+	border-width: 0.5rem 0 0 0;
+}
+
+.about{
+	position: relative;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap-reverse;
+}
+
+.about .content-box{
+	width: 50%;
+	min-width: 50%;
+	text-align: end;
+	padding-right: 3rem;
+}
+
+.about .content-box .titleText{
+	font-weight: 700;
+	color: #000;
+	font-size: 3rem;
+	margin-bottom: 1rem;
+	text-align: end;
+}
+
+.text{
+	color: #000;
+	font-size: 1.2rem;
+	text-align: justify;
+	text-align: start
+}
+
+.about .img-box{
+	position: relative;
+	min-width: 50%;
+	width: 50%;
+	min-height: 650px;
+}
+
+.img-box .fitBg{
+	opacity: 0.8;
+	height: 650px;
+}
+
+.content-box .logo{
+	position: relative;
+	min-width: 50%;
+	display: flex;
+	justify-content: space-between;
+	color: #fff;
+}
+
+
+.logo .img-box{
+	display: flex;
+	position: relative;
+	top: 50%;
+	transform: translateY(35%);
+	/*justify-content: center;*/
+	/*align-items: center;*/
+}
+
+.logo .img-box img{
+	max-width: 400px;
+	height: 400px;
+}
+.logo{
+	color: #000;
+	position: relative;
+	bottom: 6rem;
+	padding-left: 3rem;
+	letter-spacing: 2px;
+}
+
+/*Values and Vision list*/
+.text li{
+	margin-left: 2rem;
+	color: #777;
+}
+
+.text li::marker{
+	color: #bb8c00;
+}
+
+
+
+
+
+
+/*Utilities Page*/
+#utilities{
+	margin-top: 6rem;
+	background: url('../images/light_grey_bg.jpg');
+	background-position: center;
+	background-size: cover;
+	padding: 2rem 2rem 3rem;
+}
+
+#utilities form{
+	padding: 0 5rem;
+}
+
+#utility-menu{
+	position: absolute;
+	z-index: 111;
+	left: 0px;
+}
+
+.utility-menu{
+	/*background-color: rgba(1,27,57,1);*/
+	padding:0 2rem;
+	padding-right: 4rem;
+}
+
+
+.utility-menu-button{
+	margin: 0.2rem 1rem;
+	width: 100%;
+	background-color: rgba(1,27,57,1);
+	border-color: rgba(1,27,57,1);
+	font-size: 1rem;
+	font-weight: 300;
+	text-align: right;
+}
+
+.utility-menu-button.btn-dark:hover{
+	background-color: #d9a100;
+}
+
+.btn-dark:not(:disabled):not(.disabled):active, .btn-dark:not(:disabled):not(.disabled).active, .show > .btn-dark.dropdown-toggle {
+    color: #fff;
+    background-color: #bb8c00;
+    border-color: #bb8c00;
+}
+
+
+.utility-item{
+	/*margin-top: 1rem;*/
+	/*padding-top: 2rem;*/
+}
+
+.utilities-text{
+	position: relative;
+	color: #fff;
+	font-weight: 700;
+	font-size: 3rem;
+	text-align: center;
+	top: 50%;
+	transform: translateY(-50%); 
+}
+
+
+/*Note - Combining the Background PROPERTIES in these WON'T WORK*/
+.utility{
+	/*margin: 0 1rem;*/
+	/*height: 100%;*/
+	cursor: pointer;
+	padding-bottom: 4rem;
+}
+
+.calculate-button{
+	margin: 1rem 0;
+}
+
+#pipe-chart{
+	background: linear-gradient(to left, rgba(1,27,47, 0.6), rgba(1,27,47,0.7)), url("../images/pipe_chart.jpg");
+	background-size: cover;
+	background-attachment: fixed;
+	height: 100%;
+}
+
+#pipe-calculator{
+	background: linear-gradient(to left, rgba(1, 27, 47, 0.6), rgba(1,27,47,0.8)), url("../images/pipe_calculator.jpg");
+	background-size: cover;
+	background-attachment: fixed;
+	display: none;
+	height: 100%;
+}
+
+#steel-sheet-calculator{
+	background: linear-gradient(to left, rgba(1, 27, 47, 0.6), rgba(1,27,47,0.8)), url("../images/steel-sheets.jpg");
+	background-size: cover;
+	background-attachment: fixed;
+	display: none;
+	height: 100%;
+}
+
+#round-bars-calculator{
+	background: linear-gradient(to left, rgba(1, 27, 47, 0.6), rgba(1,27,47,0.8)), url("../images/round_steel_bars.jpg");
+	background-size: cover;
+	background-attachment: fixed;
+	display: none;
+	height: 100%;
+}
+
+#square-bars-calculator{
+	background: linear-gradient(to left, rgba(1, 27, 47, 0.6), rgba(1,27,47,0.8)), url("../images/square_steel_bars.jpg");
+	background-size: cover;
+	background-attachment: fixed;
+	display: none;
+	height: 100%;
+}
+
+#flat-bars-calculator{
+	background: linear-gradient(to left, rgba(1, 27, 47, 0.6), rgba(1,27,47,0.8)), url("../images/flat_steel_bars.jpg");
+	background-size: cover;
+	background-attachment: fixed;
+	display: none;
+	height: 100%;
+}
+
+#channels-gost-calculator{
+	background: linear-gradient(to left, rgba(1, 27, 47, 0.6), rgba(1,27,47,0.8)), url("../images/channels_gost.jpg");
+	background-size: cover;
+	background-attachment: fixed;
+	display: none;
+	height: 100%;
+}
+
+#channels-upn-calculator{
+	background: linear-gradient(to left, rgba(1, 27, 47, 0.6), rgba(1,27,47,0.8)), url("../images/channels_upn.jpg");
+	background-size: cover;
+	background-attachment: fixed;
+	display: none;
+	height: 100%;
+}
+
+#beams-ipn-calculator{
+	background: linear-gradient(to left, rgba(1, 27, 47, 0.6), rgba(1,27,47,0.8)), url("../images/beams_ipn.jpg");
+	background-size: cover;
+	background-attachment: fixed;
+	display: none;
+	height: 100%;
+}
+
+#beams-ipe-calculator{
+	background: linear-gradient(to left, rgba(1, 27, 47, 0.6), rgba(1,27,47,0.8)), url("../images/beams_ipe.jpg");
+	background-size: cover;
+	background-attachment: fixed;
+	display: none;
+	height: 100%;
+}
+
+#beams-hea-calculator{
+	background: linear-gradient(to left, rgba(1, 27, 47, 0.6), rgba(1,27,47,0.8)), url("../images/beams_hea.jpg");
+	background-size: cover;
+	background-attachment: fixed;
+	display: none;
+	height: 100%;
+}
+
+#beams-heb-calculator{
+	background: linear-gradient(to left, rgba(1, 27, 47, 0.6), rgba(1,27,47,0.8)), url("../images/beams_heb.jpg");
+	background-size: cover;
+	background-attachment: fixed;
+	display: none;
+	height: 100%;
+}
+
+
+#hollow-circle-calculator{
+	background: linear-gradient(to left, rgba(1, 27, 47, 0.6), rgba(1,27,47,0.8)), url("../images/hollow_circular_sections.jpg");
+	background-size: cover;
+	background-attachment: fixed;
+	display: none;
+	height: 100%;
+}
+
+
+#hollow-rect-calculator{
+	background: linear-gradient(to left, rgba(1, 27, 47, 0.6), rgba(1,27,47,0.8)), url("../images/hollow_rect_sections.jpg");
+	background-size: cover;
+	background-attachment: fixed;
+	display: none;
+	height: 100%;
+}
+
+
+
+.utilities-button{
+	font-size: 2rem;
+	font-weight: bold;
+}
+
+
+
+/*The FORM where user enters details for Calculators*/
+.utilities-form{
+	/*Initially We want the FORM to be HIDDEN*/
+	display: none;
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+	color: #fff;
+	font-size: 1rem;
+	text-align: center;
+}
+
+
+.utilities-form input{
+	text-align: center;
+}
+
+
+.form-control.utility-result-val{
+	background-color: rgba(100,100,100,0.5);
+	color: #fff;
+}
+
+
+#metricSelector, #imperialSelector{
+	margin: 1rem;
+}
+
+
+/*Partners*/
+#partners{
+	position: relative;
+	margin: 0;
+	padding: 5rem 3rem;
+	box-sizing: border-box;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	/*font-family: 'Rakkas', serif;*/
+	font-size: 1rem;
+}
+
+#partners h1{
+	font-family: 'Rakkas', serif;
+	text-align: center;
+}
+
+.partner-img img{
+	max-height: 350px;
+	max-width: 350px;
+	padding: 2rem;
+	opacity: 1;
+}
+
+
+.partner-img img:hover{
+	opacity: 0.8;
+}
+
+.partner-img p{
+	text-align: center;
+	color: #666;
+}
+
+
+/*Certifications*/
+#certifications{
+	position: relative;
+	margin: 0;
+	padding: 3rem;
+	box-sizing: border-box;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	min-height: 35rem;
+}
+#certifications h1{
+	text-align: center;
+	font-family: 'Anton', serif;
+	padding-bottom: 2rem;
+}
+
+.certification-img img{
+	height: 11rem;
+	width: 90%;
+	padding: 1.2rem;
+}
+.cert-text-box{
+	transition: .5s ease;
+  	opacity: 0;
+  	position: absolute;
+  	top: 50%;
+  	left: 50%;
+  	height: 90%;
+  	width: 90%;
+	background: #bb8c00;
+	color: #fff;
+	transform: translate(-50%, -50%);
+  	-ms-transform: translate(-50%, -50%);
+  	text-align: center;
+  	cursor: default;
+}
+.cert-text{
+	position: relative;
+	top: -25%;
+	color: #fff;
+  	font-size: 1.2rem;
+  	text-align: center;
+	transition: .3s ease-in-out;
+}
+
+.certification-img:hover .cert-text-box{
+	opacity: 0.9;
+}
+.certification-img:hover .cert-text{
+	top: 30%;
+	transition: .3s ease-in;
+}
+
+
+/*Contact Us*/
+#contact-us{
+	padding: 5rem 2rem;
+	background-color: #fff;
+}
+
+.contact-us-card{
+	padding: 5rem 0;
+	text-align: center;
+}
+
+.contact-us-icon{
+	/*color:  #0a2132;*/
+	color: #0a1122;
+	font-size: 3rem;
+	padding-bottom: 1rem;
+}
+
+.contact-us-icon:hover{
+	color: #1b5b9f;
+	/*color: #1a3142;*/
+}
+
+.contact-us-headline{
+	font-weight: 700;
+	font-size: 1.5rem;
+}
+
+.contact-us-detail{
+	font-color: #8f8f8f;
+	font-size: 1rem;
+	margin-bottom: 0;
+}
+
+/*map*/
+#map{
+	height: 650px;
+	width: 100%;
+}
+
+
+
+/*FOOTER*/
+footer{
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	flex-direction: column;
+}
+
+#footer{
+	position: relative;
+	width: 100%;
+	height: auto;
+	color: #fff;
+	background: url('../images/navbar-background.jpg');
+	background-size: cover;
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	padding: 2rem 5rem;
+}
+
+#footer .footer-container{
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	flex-direction: row;
+}
+
+#footer .footer-container .sec{
+	margin-right: 30px;
+}
+
+#footer .footer-container .sec.about-us{
+	padding: 0.5rem;
+	width: 40%;
+}
+
+#footer .footer-container h2{
+	font-family: 'Anton', serif;
+	position: relative;
+	color: #000;
+	font-weight: 500;
+	margin-bottom: 1rem;
+}
+
+#footer .footer-container h2::before{
+	content: '';
+	position: absolute;
+	bottom: -5px;
+	left: 0;
+	width: 4rem;
+	height: 2px;
+	background: #bb8c00;
+}
+
+#footer .footer-container .sec.about-us p{
+	color: #000;
+}
+
+
+#footer .footer-container .sec.about-us{
+	width: 30%;
+}
+
+.sci{
+	margin-top: 2rem;
+	display: flex;
+	padding-left: 0;
+}
+
+
+.sci li{
+	list-style: none;
+}
+
+.sci li a{
+	width: 3rem;
+	height: 3rem;
+	background: #222;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-right: 1rem;
+	text-decoration: none;
+	border-radius: 0.5rem;
+}
+
+.sci .contact-us-icon{
+	color: #fff;
+	font-size: 1.5rem;
+	padding-bottom: 0rem; 
+}
+
+.sci li a{
+	background: #774800;
+}
+
+.sci li a:hover{
+	background: #bb8c00;
+}
+
+
+.contactus{
+	width: 30%;
+	padding: 0.5rem;
+	margin-right: 0 !important;
+}
+
+.contactus .info{
+	position: relative;
+	padding-left: 0;
+}
+
+.contactus .info li{
+	display: flex;
+	margin-bottom: 1rem;
+	color: #000;
+}
+
+.contactus .info li span{
+	color: #774800;
+	font-size: 1.3rem;
+	margin-right: 10px
+}
+
+.contactus .info li a{
+	color: #000;
+	text-decoration: none;
+}
+
+.contactus .info li a:hover{
+	color: #bb8c00;
+}
+
+.contactus .cta-email, .contactus .cta-message{
+	width: 100%;
+	margin-bottom: 0.5rem;
+	padding: 0.3rem;
+}
+
+.contactus .cta-message{
+	height: 10rem;
+}
+
+.contactus .cta-button{
+	text-decoration: ;
+	background: #774800;
+	border-radius: 0.5rem;
+	border-style: none;
+
+}
+
+.contactus .cta-button:hover{
+	background: #bb8c00;
+}
+
+
+
+/*COPYRIGHT TEXT*/
+.copyrightText{
+	width: 100%;
+	background: #774800;
+	padding: 5px;
+}
+
+.copyrightText p{
+	margin-bottom: 0;
+	color: #fff;
+	text-align: center;
+	font-size: 0.8rem;
+}
+
+
+@media (max-width: 992px){
+	{
+		text-align: center;	
+	}
+	.body{
+		text-align: center;
+	}
+	.navbar-brand{
+/* 		font-size: 2rem; */
+	}
+	.navbar{
+		padding: 0.3rem 3rem;
+		padding-left: 2rem;
+/* 		font-size: 2rem; */
+	}
+	.navbar-toggler, .nav-link{
+/* 		font-size: 2rem; */
+	}
+	.nav-link .selected{
+		padding: 0.5rem;
+	}
+	.shrink .nav-link .selected{
+		padding: 0.5rem 35%;
+	}
+	.dropdown-button{
+		padding-left: 1rem;
+		display: inline;
+	}
+	.dropdown-menu p{
+		font-size: 2rem;
+	}
+	.btn-group{
+		display: inline;
+	}
+	.dropdown-item{
+		text-align: center;
+/* 		font-size: 2rem; */
+	}
+
+	.intro-tagline{
+		top: 35%;
+	}
+	#cover-section, .intro-background, .intro-foreground{
+		height: 60rem;
+	}
+	.intro-background .carousel-item{
+		height: 60rem;
+	}
+	.intro-background-heading{
+		top: 70%;
+		left: 0%;
+	}
+	#about-us{
+		padding: 4rem;
+		padding-top: 10rem;
+	}
+	.owner-image-style{
+		padding: 1rem;
+		max-height: 25rem;
+		max-width: 100%;
+	}
+	.owner-image-text{
+/* 		font-size: 1.5rem; */
+	}
+	.about-us-text{
+/* 		font-size: 2rem; */
+		text-align: justify;
+	}
+	#about-us-button{
+/* 		font-size: 2rem; */
+	}
+	.about .content-box{
+		width: 100%;
+		min-width: 100%;
+		padding-left: 5rem;
+		padding-right: 5rem;
+		padding-bottom: 4rem;
+	}
+	.about h2, .about p{
+/* 		font-size: 3rem; */
+	}
+	.text{
+		text-align: justify;
+/* 		font-size: 2rem; */
+	}
+	#partners h1, #certifications h1{
+/* 		font-size: 4rem; */
+	}
+	.partner-img p{
+/* 		font-size: 2rem; */
+	}
+	#utilities form{
+		padding: 0;
+	}
+	#pipe-chart, #pipe-calculator, #steel-sheet-calculator, 
+	#round-bars-calculator, #square-bars-calculator, #flat-bars-calculator, 
+	#channels-gost-calculator, #channels-upn-calculator, #beams-ipn-calculator,
+	#beams-ipe-calculator, #beams-hea-calculator, #beams-heb-calculator, 
+	#hollow-circle-calculator, #hollow-rect-calculator{
+		margin: 2rem 0;
+		min-height: 44rem;
+		background-size: cover;
+		background-position: center;
+		position: static;
+		background-attachment: fixed;
+	}
+	/*#pipe-chart:hover, #pipe-calculator:hover{
+		background-size: cover;
+	}*/
+	#our-products, .carousel-item{
+		height: 100rem;
+	}
+	#our-products-accordion h1, #our-services-accordion h1{
+/* 		font-size: 3rem; */
+	}
+	.accordion td{
+		padding: 0.5rem 1rem;
+		text-align: center;
+	}
+	.accordion button{
+/* 		font-size: 1.5rem; */
+		text-align: center;
+	}
+	td{
+/* 		font-size: 1.5rem; */
+		text-align: center;
+	}
+	.contact-us-icon{
+/* 		font-size: 6rem; */
+	}
+	.contact-us-headline{
+/* 		font-size: 3rem; */
+	}
+	.contact-us-detail{
+/* 		font-size: 2rem; */
+	}
+	#cta form{
+		padding: 2rem;
+/* 		font-size: 2rem; */
+	}
+	#cta h2{
+/* 		font-size: 2rem; */
+	}
+	#cta .submit-button{
+/* 		font-size: 2rem; */
+	}
+	.form-note h6{
+/* 		font-size: 1.5rem; */
+	}
+	#footer{
+		padding: 2.5rem;
+	}
+	#footer-container{
+		flex-direction: column;
+	}
+	.footer-container .sec{
+		margin-right: 0;
+		margin-bottom: 2.5rem;
+	}
+	#footer h2{
+/* 		font-size: 2rem; */
+	}
+	#footer .sec.about-us{
+		display: none;
+	}
+	#footer .sec.contactus{
+		display: block;
+		width: 100%;
+		text-align: center;
+/* 		font-size: 1.5rem; */
+	}
+	#footer .footer-container h2::before{
+		left: 50%;
+		transform: translateX(-50%);
+		width: 10rem;
+	}
+	#footer .contactus .info li{
+		display: block;
+		list-style: none;
+	}
+	#footer .form-control{
+/* 		font-size: 1.8rem; */
+	}
+	#footer textarea{
+/* 		font-size: 1.8rem; */
+	}
+
+}
+
+/*To TRIIGER DROPDOWN on HOVER (ONLY ON DESKTOPS)*/
+@media all and (min-width: 992px) {
+	.navbar .nav-item .dropdown-menu{ 
+		display: none; 
+	}
+	.navbar .nav-item:hover .nav-link{   
+	}
+	.navbar .nav-item:hover .dropdown-menu{ 
+		display: block; 
+	}
+	.navbar .nav-item .dropdown-menu{ 
+		margin-top:0; 
+	}
+}
+
